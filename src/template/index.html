@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <!-- build:remove -->
+    <base href="http://f2e.developer.163.com/" />
+    <!-- endbuild -->
+    <title>网易新闻</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- build:style template -->
+<!--     <link rel="stylesheet" type="text/css" href="./index.css" /> -->
+    <!-- /build -->
+  </head>
+
+  <body ontouchstart="">
+    <script>
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+          recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if(clientWidth >= 750 ){
+              clientWidth = 750
+              doc.body.style.width = 750 + 'px'
+            }else{
+              doc.body.style.width = clientWidth + 'px'
+            }
+            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            docEl.dataset.percent = 100 * (clientWidth / 750)
+          };
+        recalc()
+        doc.documentElement.classList.add('iosx' + win.devicePixelRatio)
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+      })(document, window);
+    </script>
+    <section class="g-container">
+      <header class="g-header">
+        <div class="title" id="title">文章标题</div>
+        <div class="sub-title">
+          <span class="source">这里是来源</span>
+          <span>时间时间</span>
+        </div>
+      </header>
+      <!-- 这里是文章正文，段落用p标签隔开 -->
+      <article class="g-content" id="content">
+        <p><strong>网易娱乐5月25日报道</strong>我原是父母生命中的女儿，只为我出嫁了，就成了钱钟书生命中的杨绛。其实我们两家，门不当，户不对。他家是旧式人家，重男轻女。女儿虽宝贝，却不如男儿重要。女儿闺中待字，知书识礼就行。我家是新式人家，男女并重，女儿和男儿一般培养，婚姻自主，职业自主。而钱钟书家呢，他两个弟弟，婚姻都由父亲做主，职业也由父亲选择。</p>
+        <p>钱钟书的父亲认为这个儿子的大毛病，是孩子气，没正经。他准会为他娶一房严肃的媳妇，经常管制，这个儿子可成模范丈夫；他生性憨厚，也必是慈祥的父亲。</p>
+        <p>
+          <figure class="figure-image" >
+            <img src="http://img3.cache.netease.com/photo/0003/2016-05-25/BNTRCF8L00AJ0003.png" width="350" height="234" id="photo" />
+            <figcaption>这里是图片描述，可以为空</figcaption>
+          </figure>
+        </p>
+        <p>
+          <figure class="figure-video">
+            <video src="http://flv2.bn.netease.com/videolib3/1606/17/xRqvh9613/SD/xRqvh9613-mobile.mp4" poster="http://vimg3.ws.126.net/image/snapshot/2016/6/G/U/VBOQJC8GU.jpg" type="video/mp4" -webkit-playsinline controls preload="none"></video>
+            <figcaption>这里是视频描述，可以为空</figcaption>
+          </figure>
+        </p>
+      </article>
+
+      <footer>
+        <div class="ios-share" id="share">
+          <div class="tip"><span>分享</span></div>
+          <div class="list" id="list">
+            <a href="share://208">
+              <div class="wx-f logo"></div>
+              <div>微信好友</div>
+            </a>
+            <a href="share://209">
+              <div class="wx-cycle logo"></div>
+              <div>微信朋友圈</div>
+            </a>
+            <a href="share://207">
+              <div class="qq-f logo"></div>
+              <div>QQ好友</div>
+            </a>
+            <a href="share://">
+              <div class="get-more logo"></div>
+              <div>更多</div>
+            </a>
+          </div>
+        </div>
+        <div class="m-ad js-ad">
+        </div>
+      </footer>
+    </section>
+    <script>
+
+
+    </script>
+    <!-- build:script template -->
+    <script type="text/javascript" src="http://localhost:3100/js/template.bundle.js"></script>
+    <!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>-->
+    <!--<script src="http://img6.cache.netease.com/utf8/3g/libs/ntes-stat.js" type="text/javascript"></script>-->
+
+    <!-- /build -->
+
+    <!-- 统计代码，百度统计 谷歌统计 -->
+  </body>
+
+</html>
