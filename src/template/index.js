@@ -16,15 +16,6 @@ import './index.less'
       dom.parentNode.removeChild(dom)
     } else {
       const ad = ads[0]
-      function writeObj(obj){
-        var description = "";
-        for(var i in obj){
-          var property=obj[i];
-          description+=i+" = "+property+" ";
-        }
-        alert(description);
-      }
-      writeObj(ad)
       const img = ad.res_url.filter(i => !!i)[0]
       let adTemplate = ``
       switch(parseInt(ad.style)){
