@@ -27,7 +27,7 @@ import './index.less'
                               <div class="info">
                                   <div class="title">${ad.main_title}</div>
                                   <div class="tag">
-                                      <div class="desc">vivo智能手机</div>
+                                      <div class="desc"></div>
                                       <div class="logo">推广</div>
                                   </div>
                               </div>
